@@ -11,10 +11,14 @@
 ## Daftar Isi
 ### - [Deskripsi Program](#deskripsi-program) 
 ### - [Penjelasan Alur Program](#penjelasan-alur-program)
-### - [Struktur Package](#struktur-package-(MVC))
+### - [Struktur Package](#struktur-package-mvc)
+### - [Penerapan Encapsulation](#penerapan-encapsulation)
+### - [Penerapan Inheritance](#penerapan-inheritance)
+### - [Penerapan Fitur](#penerapan-fitur)
+### - [Output Program](#output-program)
 
 ## Deskripsi Program
-**Sistem Konservasi & Rehabilitasi Orangutan Kalimantan** adalah aplikasi berbasis **Java CLI** yang dikembangkan dari Mini Project 1. Program ini digunakan untuk mendata, memantau, dan mengelola tahapan rehabilitasi orangutan di berbagai Taman Nasional di Pulau Kalimantan. Program menerapkan **CRUD penuh** dengan pendekatan **Object-Oriented Programming (OOP)** serta **arsitektur MVC (Model–View–Controller)**.
+**Sistem Konservasi & Rehabilitasi Orangutan Kalimantan** adalah aplikasi berbasis **Java CLI** lanjutan yang dikembangkan dari **Mini Project 1**. Program ini digunakan untuk mendata, memantau, dan mengelola tahapan rehabilitasi orangutan di berbagai Taman Nasional di Pulau Kalimantan. Program menerapkan **CRUD penuh** dengan pendekatan **Object-Oriented Programming (OOP)** serta **arsitektur MVC (Model–View–Controller)**.
 
 Pada Mini Project 2 ini ditambahkan:
 - **Inheritance**: `Orangutan` (superclass) dengan 2 subclass `OrangutanJantan` dan `OrangutanBetina`.
@@ -34,4 +38,54 @@ Pada Mini Project 2 ini ditambahkan:
 6. **Delete** -> Menghapus data berdasarkan ID.
 7. **Keluar** -> Program berhenti.
 
-## 🏛️ Struktur Package (MVC)
+## Struktur Package (MVC)
+
+        KonservasiOrangutanKalimantan/
+        ├── src/
+        │   ├── main/
+        │   │   └── Main.java                  ← Entry point (menu loop)
+        │   ├── model/                         ← M (Model)
+        │   │   ├── Orangutan.java             ← Superclass
+        │   │   ├── OrangutanJantan.java       ← Subclass 1
+        │   │   ├── OrangutanBetina.java       ← Subclass 2
+        │   │   ├── LokasiHabitat.java
+        │   │   └── CatatanRehabilitasi.java
+        │   ├── view/                          ← V (View)
+        │   │   └── KonservasiView.java
+        │   └── controller/                    ← C (Controller)
+        │       └── KonservasiController.java
+        └── README.md
+
+        
+    src/
+    ├── main/ → Entry point program
+    ├── model/ → Entity: Orangutan (superclass), OrangutanJantan, OrangutanBetina, LokasiHabitat, CatatanRehabilitasi
+    ├── view/ → Tampilan & input user (KonservasiView)
+    └── controller/ → Logika bisnis & manajemen ArrayList (KonservasiController)
+
+
+## Penerapan Encapsulation
+Semua atribut pada class `Orangutan`, `OrangutanJantan`, `OrangutanBetina`, `LokasiHabitat`, dan `CatatanRehabilitasi` dideklarasikan `private`. Akses hanya melalui **getter** dan **setter** publik, sehingga data tidak dapat diubah sembarangan dari luar class.
+
+Contoh:
+```java
+private String nama;
+public String getNama() { return nama; }
+public void setNama(String nama) { this.nama = nama; }
+```
+## Penerapan Inheritance
+**Inheritance adalah mekanisme di mana sebuah kelas (Subclass) mewarisi atribut (property) dan perilaku (method) dari kelas lain (Superclass).**
+
+- Superclass: Orangutan — atribut umum: idOrangutan, nama, umurTahun.
+
+- Subclass 1: OrangutanJantan extends Orangutan — tambahan ukuranCheekPads.
+
+- Subclass 2: OrangutanBetina extends Orangutan — tambahan jumlahAnak.
+
+Keyword super(...) dipakai di constructor subclass untuk memanggil constructor superclass.
+
+## Penerapan Fitur (Nilai Tambah)
+
+## Output Program
+
+
