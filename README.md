@@ -3,10 +3,13 @@
     Dibuat oleh: Riaz Ramadhan Al Fattah
     NIM: 2509116106
 
-<p align="left">
+<p align="center">
 <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="200">
 </p>
 
+<p align="center">
+<img width="900" height="200" alt="image" src="https://github.com/user-attachments/assets/8dc0e694-bbe1-461f-ac26-e6d4f6f822b0" />
+</p>
 
 ## Daftar Isi
 ### - [Deskripsi Program](#deskripsi-program) 
