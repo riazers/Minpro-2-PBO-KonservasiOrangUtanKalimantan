@@ -1,26 +1,26 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package model;
 
 /**
+ * Superclass Orangutan.
+ * Menyimpan atribut umum yang dimiliki semua orangutan.
+ * Menerapkan encapsulation (private + getter/setter).
  *
  * @author riaza
  */
 public class Orangutan {
-    // Nilai Tambah: Access Modifier private & Encapsulation
+    // Encapsulation: atribut private
     private String idOrangutan;
     private String nama;
     private int umurTahun;
-    private String jenisKelamin; // Jantan / Betina
 
     // Constructor
-    public Orangutan(String idOrangutan, String nama, int umurTahun, String jenisKelamin) {
+    public Orangutan(String idOrangutan, String nama, int umurTahun) {
         this.idOrangutan = idOrangutan;
         this.nama = nama;
         this.umurTahun = umurTahun;
-        this.jenisKelamin = jenisKelamin;
     }
 
     // Getter & Setter (Encapsulation)
@@ -33,6 +33,17 @@ public class Orangutan {
     public int getUmurTahun() { return umurTahun; }
     public void setUmurTahun(int umurTahun) { this.umurTahun = umurTahun; }
 
-    public String getJenisKelamin() { return jenisKelamin; }
-    public void setJenisKelamin(String jenisKelamin) { this.jenisKelamin = jenisKelamin; }
+    // Method yang akan di-OVERRIDE oleh subclass (Polymorphism) 
+    public String getJenisKelamin() {
+        return "Tidak Diketahui";
+    }
+
+    public String getKategori() {
+        return "Orangutan";
+    }
+
+    /** Info tambahan spesifik tiap subclass */
+    public String getInfoTambahan() {
+        return "-";
+    }
 }

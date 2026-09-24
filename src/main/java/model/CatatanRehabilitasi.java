@@ -5,16 +5,17 @@
 package model;
 
 /**
+ * Model catatan rehabilitasi.
+ * Menghubungkan Orangutan (polymorphic) dengan LokasiHabitat.
  *
  * @author riaza
  */
 public class CatatanRehabilitasi {
     private String idCatatan;
-    private Orangutan orangutan;
+    private Orangutan orangutan;   // Polymorphism: bisa Jantan atau Betina
     private LokasiHabitat lokasi;
-    private String statusKesehatan; // Karantina, Sekolah Hutan, Siap Rilis, Dirilis
+    private String statusKesehatan;
 
-    // Constructor
     public CatatanRehabilitasi(String idCatatan, Orangutan orangutan, LokasiHabitat lokasi, String statusKesehatan) {
         this.idCatatan = idCatatan;
         this.orangutan = orangutan;
@@ -22,7 +23,6 @@ public class CatatanRehabilitasi {
         this.statusKesehatan = statusKesehatan;
     }
 
-    // Getter & Setter
     public String getIdCatatan() { return idCatatan; }
     public void setIdCatatan(String idCatatan) { this.idCatatan = idCatatan; }
 

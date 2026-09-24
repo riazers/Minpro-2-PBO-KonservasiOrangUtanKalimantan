@@ -5,16 +5,16 @@
 package model;
 
 /**
+ * Model lokasi habitat orangutan.
  *
  * @author riaza
  */
 public class LokasiHabitat {
     private String idLokasi;
-    private String namaWilayah; // contoh: TN Tanjung Puting, TN Sebangau
-    private String provinsi;    // Kalteng, Kalbar, Kaltim, dll.
-    private String statusZona;  // Hutan Lindung, Suaka Margasatwa, Taman Nasional
+    private String namaWilayah;
+    private String provinsi;
+    private String statusZona;
 
-    // Constructor
     public LokasiHabitat(String idLokasi, String namaWilayah, String provinsi, String statusZona) {
         this.idLokasi = idLokasi;
         this.namaWilayah = namaWilayah;
@@ -22,7 +22,6 @@ public class LokasiHabitat {
         this.statusZona = statusZona;
     }
 
-    // Getter & Setter
     public String getIdLokasi() { return idLokasi; }
     public void setIdLokasi(String idLokasi) { this.idLokasi = idLokasi; }
 
